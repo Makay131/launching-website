@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'poppins', sans-serif;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(
+      to right bottom,
+      hsla(28, 100%, 50%, 0.274),
+      rgba(255, 119, 0, 0.582)
+    ),
+    url('./images/background.png');
+  background-position: center;
+  background-size: cover;
+  padding: 0 8%;
+
+  position: relative;
+}
+
+.logo {
+  width: 250px;
+  padding: 20px 0;
+  cursor: pointer;
+}
+
+.content {
+  top: 50%;
+  position: absolute;
+  transform: translateY(-50%);
+  color: #fff;
+}
+
+.content p {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.content h1 {
+  font-size: 64px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.content h1 span {
+  color: #fff3bf;
+}
+
+.content button {
+  background: transparent;
+  border: 2px solid #fff;
+  outline: none;
+  padding: 12px 25px;
+  color: #fff;
+
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+  cursor: pointer;
+  font-size: 20px;
+
+  transition: 0.4s ease;
+}
+
+.content button:hover {
+  border: 2px solid #fff3bf;
+  color: #fff3bf;
+}
+
+.launch-time {
+  display: flex;
+}
+
+.launch-time div {
+  flex-basis: 200px;
+}
+
+.launch-time div p {
+  font-size: 60px;
+  margin-bottom: -3px;
+}
+
+.rocket {
+  width: 250px;
+  position: absolute;
+  right: 10%;
+  bottom: 0;
+  animation: rocket 4s linear infinite;
+}
+
+@keyframes rocket {
+  0% {
+    bottom: 0;
+    opacity: 0;
+  }
+  100% {
+    bottom: 105%;
+    opacity: 1;
+  }
+}
+
+/* BLURRING */
+.bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(187, 54, 94);
+
+  z-index: 10;
+  filter: blur(0px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loading-text {
+  font-size: 50px;
+  color: #fff3bf;
+}
